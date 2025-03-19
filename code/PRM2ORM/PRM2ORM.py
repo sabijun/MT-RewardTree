@@ -1,4 +1,5 @@
 import torch
+import argparse
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 
@@ -84,3 +85,9 @@ class PRM2ORM:
                 reward += torch.log(dpo_probability / ref_probability) / length
             prompt_token_list = torch.cat((prompt_token_list,mt_token_list[0][prompt_length + i].unsqueeze(0).unsqueeze(0)),dim=1)
         return reward
+    
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument()
