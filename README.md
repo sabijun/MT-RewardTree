@@ -1,6 +1,5 @@
-# MT_RewardTree
 <p align='center'>
-    <img src="/home/jiahan/github/MT_RewardTree/images/title-MT-RewardTree.png">
+    <img src="images/title-MT-RewardTree.png">
 </p>
 
 <div align='center'>
