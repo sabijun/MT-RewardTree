@@ -23,7 +23,7 @@ Following data formatting, the program can be executed through two methods: **co
 **Example**:
 
 ```
-python MCTS.py src/zh-en output/result en zh
+python MCTS.py src/en-zh output/result en zh --gpu_map 0,1 --threshold 0.04 0.4
 ```
 
 <hr>
@@ -46,13 +46,54 @@ usage: python MCTS.py [input_file] [output_file] [src_lang] [tar_lang]
 `src_lang` (required)
 
     The language of the source sentences.
-    choose from ['en', 'de', 'ru', 'zh']
+
+    Possible choices: "en", "de", "ru", "zh"
 
     If you need to support additional languages, you can adjust the code:
 ```python
 ...
-lang_name = {'en':'English', 'de':'German', 'ru':'Russian', 'zh':'Chinese'}  # e.g. 'ja':'Japanese'
+lang_name = {'en':'English', 'de':'German', 'ru':'Russian', 'zh':'Chinese'}  # e.g. 'jp':'Japanese'
 ...
 ```
+`tar_lang` (required)
+
+​	The language of the target sentences.
+
+​	Same as `src_lang`.
+
+`--gpu_map` (optional)
+
+​	The gpu index used.
+
+​	Default: "0,1"
+
+`--trans_model` (optional)
+
+​	The name/path of the translation model.
+
+​	Default: "Unbabel/TowerInstruct-7B-v0.2"
+
+> [!NOTE]
+> If you need to modify the prompt, you can access the `process` method.
+
+`--eva_model` (optional)
+
+​	the name/path of the evaluation model.
+
+​	Default: "Unbabel/wmt22-cometkiwi-da"
+
+> [!NOTE]
+> We recommend using cometkiwi series.
+> If you wish to use any alternative reference-free evaluation, you may need to modify the `get_score` method accordingly.
+
+`--threshold` (optional)
+
+​	The score threshold that determine if the translation pair will be logged.
+
+​	Default: 0.04 0.4
+
+#### python code usage
+
+You can find the example in [usage.ipynb](usage.ipynb)
 
 

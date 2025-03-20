@@ -6,8 +6,6 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from comet import download_model, load_from_checkpoint
 from typing import List
 
-
-# 消除warning
 logging.getLogger("pytorch_lightning").setLevel(logging.WARNING)
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
@@ -59,6 +57,7 @@ class MT:
 
     
     def process(self, src: str):
+        # Composition prompt
         prompt = [{"role": "user", "content": "Translate the following text from " + self.lang_pair[0] + " into " + self.lang_pair[1] + ".\n" + self.lang_pair[0] + ":" + src + "\n" + self.lang_pair[1] + ":"}]
         prompt_tokens = self.get_input_ids(tokenizer=self.tokenizer,prompt=prompt,template='chat',add_generation_prompt=True).to(self.device)
         end_label = False
