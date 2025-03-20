@@ -1,6 +1,6 @@
-## Quick Start
+# Quick Start
 
-### Prepare Data
+## Prepare Data
 
 The source sentence should be formatted according to the following structure:
 
@@ -14,11 +14,11 @@ A spokesperson for Sons & Daughters said they were "shocked and devastated" by h
 ...
 ```
 
-### Prefixed Preference Pair Generation
+## Prefixed Preference Pair Generation
 
 Following data formatting, the program can be executed through two methods: **command-line interface** and **Python scripting**.
 
-#### Command-line Interface
+### Command-line Interface
 
 **Example**:
 
@@ -36,20 +36,20 @@ usage: python MCTS.py [input_file] [output_file] [src_lang] [tar_lang]
 ##### Named Arguments
 
 `input_file` (required)
-
-    The path of the translation source sentences.
+    
+​	The path of the translation source sentences.
 
 `output_file` (required)
 
-    The path of the output file.
+​	The path of the output file.
 
 `src_lang` (required)
 
-    The language of the source sentences.
+​	The language of the source sentences.
 
-    Possible choices: "en", "de", "ru", "zh"
+​	Possible choices: "en", "de", "ru", "zh"
 
-    If you need to support additional languages, you can adjust the code:
+​	If you need to support additional languages, you can adjust the code:
 ```python
 ...
 lang_name = {'en':'English', 'de':'German', 'ru':'Russian', 'zh':'Chinese'}  # e.g. 'jp':'Japanese'
@@ -92,7 +92,7 @@ lang_name = {'en':'English', 'de':'German', 'ru':'Russian', 'zh':'Chinese'}  # e
 
 ​	Default: 0.04 0.4
 
-#### python code usage
+### python code usage
 
 You can find the example in [usage.ipynb](usage.ipynb)
 
