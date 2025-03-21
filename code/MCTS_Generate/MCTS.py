@@ -10,7 +10,7 @@ logging.getLogger("pytorch_lightning").setLevel(logging.WARNING)
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 class MT:
-    def __init__(self, llm, tokenizer, eva, threshold, output_path, lang_pair, torch_dtype=torch.float16):
+    def __init__(self, llm, tokenizer, eva, threshold, output_path, lang_pair):
         self.llm = llm.eval()
         self.eva = eva
         self.tokenizer=tokenizer

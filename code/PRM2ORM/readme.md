@@ -37,7 +37,8 @@ usage: python PRM2ORM.py [trained_model] [ref_model] [input_path] [src_lang] [ta
 ##### Named Arguments
 
 `trained_model` (required)
-	The name/path of the trained model.
+
+    The name/path of the trained model.
 
 ​	Possible choices: `sabijun/MT-PRM-LLaMA-3.2-3B` , `sabijun/MT-PRM-Qwen-2.5-3B`
 

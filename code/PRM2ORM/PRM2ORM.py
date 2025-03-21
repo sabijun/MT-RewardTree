@@ -117,7 +117,7 @@ if __name__ == '__main__':
 
     prm2orm = PRM2ORM(trained_model, 'cuda:' + args.trained_device, ref_model, 'cuda:' + args.ref_device, tokenizer)
 
-    f = open('/home/jiahan/github/MT_RewardTree/code/PRM2ORM/output/results', 'w', encoding='utf-8')
+    f = open('output/results', 'w', encoding='utf-8')
     for i in range(len(lines) // 2):
         score = prm2orm.score([lang_name[src_lang], lang_name[tar_lang]], lines[2*i], lines[2*i+1], method)
         f.write(lines[2*i] + '\n' + lines[2*i+1] + '\t' + str(score.item()) + '\n')
