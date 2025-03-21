@@ -1,0 +1,4 @@
+The hacked up version of Jedi Knight was crashing because it was calling a function off the end of a vtable.
+绝地武士的破解版崩溃了，因为它调用了 vtable 结尾的一个函数。
+Even if it's true that such facts exist in science it's still possible to argue that scientific facts are theory-laden.
+即使这些事实确实存在于科学之中，仍然有可能认为科学事实是纯理论的。

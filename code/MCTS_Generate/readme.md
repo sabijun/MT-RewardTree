@@ -47,7 +47,7 @@ usage: python MCTS.py [input_file] [output_file] [src_lang] [tar_lang]
 
 ​	The language of the source sentences.
 
-​	Possible choices: "en", "de", "ru", "zh"
+​	Possible choices: `"en"` , `"de"` , `"ru"` , `"zh"`
 
 ​	If you need to support additional languages, you can adjust the code:
 ```python
