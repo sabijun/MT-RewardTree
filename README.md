@@ -23,6 +23,7 @@
 - Finally, we deploy our Implicit Process Reward Model in both Test-time Alignment and Hypothesis Ensembling frameworks, demonstrating significant performance improvements across evaluation metrics.
 - We also provide the code for generating token-level prefixed translation preference pairs and utilizing our Process RM to obtain sequence-level results. You can access these codes in the code directory.
 
+
 #### Citation
 ```bash
 @article{feng2025mtrewardtree,
