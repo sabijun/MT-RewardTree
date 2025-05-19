@@ -55,7 +55,7 @@ def call_gemini_api(prompt):
     """
     print(f"Prompt: {prompt}")
 
-    genai.configure(api_key='AIzaSyCYYx2O3L9HSpVOwWKyx-B_wBAzHXkdz3w')  # 填入自己的api_key
+    genai.configure(api_key='')  # 填入自己的api_key
     
     model = genai.GenerativeModel('gemini-1.5-flash')
     
@@ -89,7 +89,7 @@ def call_gemini_15_flash_api(prompt):
     """
     print(f"Prompt: {prompt}")
 
-    client = genai.Client(api_key="AIzaSyCYYx2O3L9HSpVOwWKyx-B_wBAzHXkdz3w")
+    client = genai.Client(api_key="")
 
     
     retries = 0
@@ -124,7 +124,7 @@ def call_gemini_20_flash_api(prompt):
     """
     print(f"Prompt: {prompt}")
 
-    client = genai.Client(api_key="AIzaSyCYYx2O3L9HSpVOwWKyx-B_wBAzHXkdz3w")
+    client = genai.Client(api_key="")
 
     
     retries = 0

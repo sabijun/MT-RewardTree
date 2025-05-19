@@ -10,8 +10,8 @@ device = "cuda:5"
 
 #model_name = "RLHFlow/ArmoRM-Llama3-8B-v0.1"
 
-#model_id = "/mnt/zju105100171/home/jiahan/model/Llama3.2-3B-Instruct/rm/full/epoch2"
-#model_id = "/mnt/zju105100171/home/jiahan/model/Llama3.2-3B-Instruct/rm/full_contrast/epoch2"       
+#model_id = "model/Llama3.2-3B-Instruct/rm/full/epoch2"
+#model_id = "model/Llama3.2-3B-Instruct/rm/full_contrast/epoch2"       
 
 class ArmoRMPipeline:
     def __init__(self, model_id, device_map="cuda:0", torch_dtype=torch.bfloat16, truncation=True, trust_remote_code=False, max_length=4096):
@@ -97,7 +97,7 @@ def orm_selection(source, hypotheses, model_selection):
             rewards.append(score)
 
     elif model_selection == "Ours-llama-3B-Contrast":
-        model_name = "/home/jiahan/model/Llama3.2-3B-Instruct/rm/full_contrast/epoch2" 
+        model_name = "model/Llama3.2-3B-Instruct/rm/full_contrast/epoch2" 
         rm = AutoModelForSequenceClassification.from_pretrained(
             model_name,
             torch_dtype=torch.bfloat16,
@@ -115,7 +115,7 @@ def orm_selection(source, hypotheses, model_selection):
                 score = rm(**conv_tokenized).logits[0][0].item()
                 rewards.append(score)
     elif model_selection == "Ours-llama-3B-Token-DPO":
-        model_name = "/mnt/zju105100171/home/jiahan/model/Llama3.2-3B-Instruct/rm/full/epoch2"
+        model_name = "model/Llama3.2-3B-Instruct/rm/full/epoch2"
         rm = AutoModelForSequenceClassification.from_pretrained(
             model_name,
             torch_dtype=torch.bfloat16,
@@ -133,7 +133,7 @@ def orm_selection(source, hypotheses, model_selection):
                 score = rm(**conv_tokenized).logits[0][0].item()
                 rewards.append(score)
     elif model_selection == "Ours-Qwen-epoch1":
-        model_name = "/home/jiahan/model/Qwen2.5-3B-Instruct/rm/full_contrast/epoch1"
+        model_name = "model/Qwen2.5-3B-Instruct/rm/full_contrast/epoch1"
         rm = AutoModelForSequenceClassification.from_pretrained(
             model_name,
             torch_dtype=torch.bfloat16,
@@ -151,7 +151,7 @@ def orm_selection(source, hypotheses, model_selection):
                 score = rm(**conv_tokenized).logits[0][0].item()
                 rewards.append(score)
     elif model_selection == "Ours-Qwen-epoch2":
-        model_name = "/home/jiahan/model/Qwen2.5-3B-Instruct/rm/full/epoch2"
+        model_name = "model/Qwen2.5-3B-Instruct/rm/full/epoch2"
         rm = AutoModelForSequenceClassification.from_pretrained(
             model_name,
             torch_dtype=torch.bfloat16,

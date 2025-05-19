@@ -14,10 +14,10 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 class MT:
     def __init__(self, torch_dtype=torch.float16):
-        #DPO_PATH = '/mnt/zju105100171/home/jiahan/model/Llama3.2-3B-Instruct/dpo/full/epoch2'
-        #REF_PATH = '/mnt/zju105100171/home/jiahan/model/Llama3.2-3B-Instruct/base/Llama-3.2-3B-Instruct'
-        DPO_PATH = '/mnt/zju105100171/home/jiahan/model/Qwen2.5-3B-Instruct/dpo/full/epoch2'
-        REF_PATH = '/mnt/zju105100171/home/jiahan/model/Qwen2.5-3B-Instruct/base/Qwen2.5-3B-Instruct'
+        #DPO_PATH = 'model/Llama3.2-3B-Instruct/dpo/full/epoch2'
+        #REF_PATH = 'model/Llama3.2-3B-Instruct/base/Llama-3.2-3B-Instruct'
+        DPO_PATH = 'model/Qwen2.5-3B-Instruct/dpo/full/epoch2'
+        REF_PATH = 'model/Qwen2.5-3B-Instruct/base/Qwen2.5-3B-Instruct'
         self.dpo_device = 'cuda:2'
         self.ref_device = 'cuda:2'  # 好像能够放到一张卡上
         self.language_name = [['German','English'],['English','German'],['English','Russian'],['Rassian','English'],['Chinese','English'],['English','Chinese']]
