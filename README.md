@@ -4,7 +4,7 @@
 
 <hr>
 
-### Overview of MT-RewardTree
+## Overview of MT-RewardTree
 
 <p align='center'>
     <img src="images\MT-RewardTree_structure.png">
